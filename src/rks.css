@@ -354,22 +354,64 @@ footer{
 /* user profile end  */
 
 /* post details start  */
-.post-details{
-  
-    padding-right: 20px;
-}
 
-.post-content ul li{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 10px;
-}
-.post-content ul li span{
-    width: 12px;
-    height: 12px;
+.author-name span{
+    width: 8px;
+    height: 8px;
     background: var(--pirmary-color);
     border-radius: 50%;
+    top: 0;
     display: inline-block;
+}
+.post-img {
+    position: relative;
+    overflow-x: hidden;
+}
+.post-img .preview-overlay{
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.post-img:hover .preview-overlay{
+    left: 0;
+}
+.post-img:hover .preview-overlay button{
+    margin-top: 0;
+}
+.preview-overlay button{
+    background: transparent!important;
+    margin-top: 300px;
+    transition: all 0.5s;
+    transition-delay: 0.3s;
+}
+.post-details {
+    border-bottom: 1px dotted var(--pirmary-color);
+}
+.post-technoloy ul li span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--pirmary-color);
+    border-radius: 50%;
+    margin-right: 5px;
+
+}
+.view-details-right-side {
+    position: relative;
+}
+.view-details-right-side .btns {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+.view-details-right-side .btns button{
+    width: 80%;
 }
 /* post details end  */

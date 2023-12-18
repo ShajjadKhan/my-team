@@ -1,66 +1,45 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
-import Button from "../Components/Button";
 
+import Button from "../Components/Button";
+import PostAuthor from "../Components/PostAuthor";
+import ReviewsQuantity from "../Components/ReviewsQuantity";
+import PostTime from "../Components/PostTime";
+import PostImageContainer from "../Components/PostImageContainer";
+import PostDetails from "../Components/PostDetails";
+import PostTechnologyContainer from "../Components/PostTechnologyContainer";
+import Price from "../Components/Price";
 export default function ViewDetails() {
-  const loaderData = useLoaderData();
   return (
     <div className="textColor">
-      <div className="row mt-3 flex justify-between">
-        <div className="post-details w-[60%]  secondaryBg borderforrks p-2">
-          <h1 className="text-4xl mb-3 mt-3 font-medium">
-            Anaton - SaaS Landing Page WordPress
-          </h1>
-          <div className="post-img mb-3 p-[2px] primaryBg ">
-            <img
-              src="https://themeforest.img.customer.envatousercontent.com/files/469105743/preview/01_cover.__large_preview.png?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=2ced5f87492308b177ae41cd076e058e"
-              alt=""
-              className="w-full"
-            />
-          </div>
-          <div className="post-description text-[#acacac] mb-3">
-            {loaderData.body}
-          </div>
-          <div className="preview-button flex gap-5 flex-col">
-            <Button btnName="Preview" />
-            <Button btnName="Buy Now" />
+      <div className="row flex justify-between flex-col lg:flex-row">
+        <div className="left-row w-full lg:w-[60%]">
+          <div className="page-content">
+            <div className="page-title">
+              <h1 className="text-xl lg:text-3xl font-bold mt-10">
+                KALLYAS - Creative eCommerce Multi-Purpose WordPress Theme
+              </h1>
+            </div>
+            <div className="row flex justify-between flex-col  lg:flex-row items-center mt-4">
+              <PostAuthor />
+              <ReviewsQuantity />
+              <PostTime />
+            </div>
+            <div className="post-img-container ">
+              <PostImageContainer />
+            </div>
+            <div className="post-btn mt-5 w-full flex justify-center items-center">
+              <Button btnName="Live Preview" />
+            </div>
+            <div className="post-details-container">
+              <PostDetails />
+            </div>
+            <div className="post-technoloy-container">
+              <PostTechnologyContainer />
+            </div>
           </div>
         </div>
-        <div className="post-suggestion w-[38%] secondaryBg  borderforrks p-2">
-          <h1 className="primaryColor text-xl">
-            Price : <span className="text-[#acacac]">200Tk</span>
-          </h1>
-          <div className="post-content">
-            <ul className="text-[#acacac] ml-5 ">
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-              <li>
-                <span></span>Quality checked by Envato
-              </li>
-            </ul>
-          </div>
+        <div className="right-row view-details-right-side secondaryBg borderforrks p-2 lg:w-[20%] h-[400px] mt-20">
+          <Price />
         </div>
       </div>
     </div>

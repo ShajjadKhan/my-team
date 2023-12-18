@@ -1,6 +1,0 @@
-/*
- * Title: 
- * Description: 
- * Author: 
- * Developer: 
- */
